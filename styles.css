@@ -138,7 +138,7 @@ nav a:hover {
 section {
     padding: 60px 20px;
     text-align: center;
-    border-top: 1px solid #333;
+    /* border-top: 1px solid #333; */
 }
 
 .category {

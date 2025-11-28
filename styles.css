@@ -43,6 +43,18 @@ header {
     transition: transform 0.3s ease;
 }
 
+.icon{
+    scale: 1.2;
+}
+.blog-img{
+    border-radius: 100%;
+    scale: 1.2;
+    padding: 1px;
+    object-fit: cover;
+    border: 1px solid #cc6d2e;
+    transition: transform 0.2s ease;
+}
+
 .profile-img:hover {
     transform: scale(1.05);
 }
@@ -132,7 +144,7 @@ section {
     display: block;
     font-size: 2.3em;
     margin-bottom: 30px;
-    font-family: 'Arial', sans-serif;
+    font-family: 'Noto Sans JP','Arial', sans-serif;
     font-weight: bolder;
     color: #bb6310;
     /* text-shadow: 5px 5px #000; */
@@ -142,6 +154,7 @@ section {
 h1,
 h2,
 h3 {
+    
     margin-bottom: 10px;
 }
 

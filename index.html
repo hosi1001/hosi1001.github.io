@@ -13,9 +13,11 @@
 <body>
     <header>
         <div class="header-content">
-            <div class="name">
-                <h1>hosi</h1>
-            </div>
+            <section id="top">
+                <div class="name">
+                    <h1>hosi</h1>
+                </div>
+            </section>
             <img src="./img/top.png" alt="Profile Image" class="profile-img">
         </div>
         <nav>
@@ -26,6 +28,7 @@
                 <a href="#interest">Interest</a>
                 <a href="#projects">Projects</a>
                 <a href="#events">Events</a>
+                <a href="#qualifications">Qualifications</a>
                 <a href="#contact">Contact</a>
                 <!-- <a href="#links">Links</a> -->
             </div>
@@ -37,6 +40,31 @@
         </nav>
 
     </header>
+    <div class="menu-wrapper">
+    <input type="checkbox" id="menu-toggle" hidden>
+    
+    <label class="menu-icon" for="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </label>
+    
+    <div class="overlay"></div>
+    
+        <nav class="menu">
+            <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#interest">Interest</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#qualifications">Qualifications</a></li>
+            <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+
+
     <section id="about">
         <span class="category">$ About Me</span>
         <div class="profile">
@@ -94,6 +122,7 @@
                 </a>
                 <p>2022, 2023, 2024, 2025年度に参加<br>2024年度：優秀賞、特別賞<br>2025年度：優秀賞</p>
             </div>
+
         </div>
     </section>
     <section id="qualifications">

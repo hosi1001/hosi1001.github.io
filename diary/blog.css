@@ -118,6 +118,7 @@ section {
 }
 
 .about:hover {
+  transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(12, 142, 218, 0.137);
 }
 

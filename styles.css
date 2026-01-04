@@ -12,6 +12,10 @@ body {
     line-height: 1.6;
 }
 
+p {
+    font-size: 1.25rem; 
+    margin-bottom: 1.1em; 
+}
 
 html {
     scroll-behavior: smooth;

@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>hosi</title>
   <link rel="stylesheet" href="blog.css" />
-   <!-- <link rel="stylesheet" href="../styles.css" /> -->
   <link rel="shortcut icon" type="image/x-icon" href="../img/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -15,48 +15,41 @@
   <header>
     <div class="header-content">
       <div class="name">
-          <h1>hosi</h1>
+        <h1>hosi</h1>
       </div>
-      <!-- <img src="../img/top.png" alt="Profile Image" class="profile-img"> -->
     </div>
-
 
     <nav class="diary-nav">
       <h2>
         <div class="nav-wrapper">
-          <!-- <a href="#diary">Blog</a>
-          <a href="#about">About</a> -->
           <a href="../index.html">Homepage</a>
-
         </div>
       </h2>
     </nav>
   </header>
 
   <main id="blog">
-    <section>
+    <section id="entry-container">
       <div class="category">$ Blog</div>
-
-      <div class="blog-entry">
-        <h2>2025 / 6 / 15</h2>
-        <p>いつかMark Downを自動的にHTMLに変換させてブログを書きたい</p>
-      </div>
-
-    </section>
-
-    <section id="about">
-      <div class="category">$ About Blog</div>
-      <div class="about">
-        <p>記録をしたいページ</p>
-      </div>
     </section>
   </main>
 
 
+
+  
+    <section id="about">
+      <div class="category">$ About Blog</div>
+      <div class="about">
+        <h2>このページの概要</h2>
+        <p>記録をしたいページ、将来的には機能をもう少し盛りたい</p>
+      </div>
+    </section>
+
   <footer>
-    <p>&copy; 2025 hosi. All Rights Reserved.</p>
+    <p>&copy; 2026 hosi. All Rights Reserved.</p>
   </footer>
-
+  
+  <script src="./data/list.js"></script>
+  <script src="./blogloader.js"></script>
 </body>
-
 </html>

@@ -133,6 +133,22 @@ section {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+.about h2{
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #bb6310;
+    text-align: left; 
+}
+
+.about p {
+  text-align: left;      
+  font-weight: 400;
+  font-size: 1.1em;      
+  line-height: 1.8;      
+  margin-top: 1em;
+}
+
+
 .about:hover {
   transform: translateY(-5px);
   box-shadow: 0 4px 12px rgba(12, 142, 218, 0.137);

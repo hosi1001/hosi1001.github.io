@@ -306,6 +306,7 @@ footer {
 
 .menu {
   position: fixed;
+  overflow: hidden;
   top: 0;
   left: -250px; 
   width: 250px;
@@ -322,7 +323,7 @@ footer {
 
 .menu ul {
   list-style: none;
-  padding: 60px 20px;
+  padding: 40px 30px;
 }
 
 .menu li {

@@ -10,6 +10,8 @@
 
 </head>
 
+
+
 <body>
     <header>
         <div class="header-content">
@@ -49,6 +51,7 @@
         <span></span>
     </label>
     
+
     <div class="overlay"></div>
     
         <div class="menu">
@@ -158,5 +161,20 @@
         <p>&copy; 2026 hosi. All Rights Reserved.</p>
     </footer>
 </body>
+
+
+<script>
+
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('menu-toggle').checked = false;
+    });
+  });
+
+  document.querySelector('.overlay').addEventListener('click', () => {
+    document.getElementById('menu-toggle').checked = false;
+  });
+</script>
+
 
 </html>

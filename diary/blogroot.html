@@ -10,26 +10,55 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
+
+
+
 <body>
+
+  <div class="menu-wrapper">
+  <input type="checkbox" id="menu-toggle" hidden>
+  
+  <label class="menu-icon" for="menu-toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  <div class="overlay"></div>
+  
+      <div class="menu">
+          <ul>
+            <li><a href="#top">Top</a></li>
+            <li><a href="#blogcontent">Blog</a></li>
+            <!-- <li>-----------------</li> -->
+            <li><a href="../index.html">Homepage</a></li>
+          </ul>
+      </div>
+  </div>
 
   <header>
     <div class="header-content">
-      <div class="name">
-        <h1>hosi</h1>
-      </div>
+        <section id="top">
+            <div class="name">
+                <h1>hosi</h1>
+            </div>
+        </section>
+        <img src="../img/chess.png" alt="Profile Image" class="profile-img">
     </div>
 
+
     <nav class="diary-nav">
-      <h2>
-        <div class="nav-wrapper">
-          <a href="../index.html">Homepage</a>
+      
+        <div class="nav-row">
+          <a href="#blogcontent">Blog</a>
+          <a href="../index.html">Home</a>
         </div>
-      </h2>
+      
     </nav>
   </header>
 
   <main id="blog">
-    <section id="entry-container">
+    <!-- <section id="entry-container"> -->
+      <section id = "blogcontent">
       <div class="category">$ Blog</div>
     </section>
   </main>
@@ -41,15 +70,34 @@
       <div class="category">$ About Blog</div>
       <div class="about">
         <h2>このページの概要</h2>
-        <p>記録をしたいページ、将来的には機能をもう少し盛りたい</p>
+        <p>記録をしたいページ、将来的には機能をもう少し開発予定</p>
       </div>
     </section>
 
   <footer>
     <p>&copy; 2026 hosi. All Rights Reserved.</p>
   </footer>
-  
+
+
+
+
   <script src="./data/list.js"></script>
   <script src="./blogloader.js"></script>
 </body>
+
+
+<script>
+
+  document.querySelectorAll('.menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('menu-toggle').checked = false;
+    });
+  });
+
+  document.querySelector('.overlay').addEventListener('click', () => {
+    document.getElementById('menu-toggle').checked = false;
+  });
+</script>
+
+
 </html>

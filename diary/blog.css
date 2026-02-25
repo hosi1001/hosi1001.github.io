@@ -67,8 +67,8 @@ header::before {
 
     background-image: url("../img/dot1.png");
     background-position: 25% 50%;
-    background-repeat: repeat;
-
+    /* background-repeat: repeat; */
+    background-size: cover;
     filter: blur(6px);     
     opacity: 0.5;          
 
@@ -141,6 +141,10 @@ section {
   padding: 60px 20px;
   text-align: center;
   border-top: 1px solid #333;
+}
+
+#top {
+  border-top: none;
 }
 
 .category {

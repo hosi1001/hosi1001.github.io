@@ -38,9 +38,9 @@ header::before {
     inset: 0;
 
     background-image: url("./img/dot1.png");
-    background-position: 25% 50%;
-    background-repeat: repeat;
-
+    background-position: 0% 50%;
+    /* background-repeat: repeat; */
+    background-size: cover;
     filter: blur(6px);     
     opacity: 0.5;          
 
@@ -167,7 +167,11 @@ nav a:hover {
 section {
     padding: 60px 20px;
     text-align: center;
-    /* border-top: 1px solid #333; */
+    border-top: 1px solid #333;
+}
+
+#top {
+  border-top: none;
 }
 
 .category {

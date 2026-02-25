@@ -3,6 +3,10 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+p {
+    font-size: 1.25rem; 
+    margin-bottom: 1.1em; 
+}
 
 html {
   scroll-behavior: smooth;
@@ -43,6 +47,37 @@ header h1 {
   font-size: 2.5em;
 }
 
+header {
+    position: relative;
+    background-color: #1f1f1f;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; 
+}
+
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../img/dot1.png");
+    background-position: 25% 50%;
+    background-repeat: repeat;
+
+    filter: blur(6px);     
+    opacity: 0.5;          
+
+    z-index: 0;
+}
+
+
+header > * {
+    position: relative;
+    z-index: 1;
+}
+
 .header-content {
   display: flex;
   align-items: center;
@@ -63,23 +98,43 @@ header h1 {
     display: block;     
 }
 
+.name {
+    text-align: center;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
 nav {
   margin-top: 15px;
 }
 
-nav a,
+nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 15px;
+    margin-right: 30px;
+    margin-left: 30px;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
 .nav-row a {
-  color: #f5f5f5;
-  text-decoration: none;
-  margin: 0 25px;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 32px;
+    font-size: 1.7em;
+    transition: color 0.3s ease;
+}
+
+.nav-row a:hover {
+    color: #00bcd4;
 }
 
 .nav-row {
   margin: 10px 0;
   border-radius: 10px;
 }
+
 
 
 section {
@@ -153,3 +208,102 @@ footer {
   font-size: 0.9em;
   color: #aaa;
 }
+
+/* humberger */
+
+.menu-wrapper {
+  position: relative;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 30px;
+  position: fixed; 
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 5;
+  display: inline-block;
+  color: #bb6310;
+}
+
+.menu-icon span {
+  display: block;
+  height: 4px;
+  margin: 6px 0;
+  background: #c2c2c2;
+  border-radius: 2px;
+  transition: 0.4s;
+}
+
+#menu-toggle:checked + .menu-icon span {
+  background: #272727;   /* ← 黒 */
+}
+
+/* ハンバーガーがXに変形 */
+#menu-toggle:checked + .menu-icon span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+#menu-toggle:checked + .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+#menu-toggle:checked + .menu-icon span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+/* オーバーレイ背景 */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+#menu-toggle:checked ~ .overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.menu {
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  left: -250px; 
+  width: 250px;
+  height: 100%;
+  background: #b16015;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+  transition: left 0.4s ease;
+  z-index: 2;
+}
+
+#menu-toggle:checked ~ .menu {
+  left: 0; 
+}
+
+.menu ul {
+  list-style: none;
+  padding: 40px 30px;
+}
+
+.menu li {
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: 650;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #0591bb;
+}
+

@@ -23,11 +23,36 @@ html {
 
 
 header {
+    position: relative;
     background-color: #1f1f1f;
     padding: 30px 20px;
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    overflow: hidden; 
 }
+
+
+header::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("./img/dot1.png");
+    background-position: 25% 50%;
+    background-repeat: repeat;
+
+    filter: blur(6px);     
+    opacity: 0.5;          
+
+    z-index: 0;
+}
+
+
+header > * {
+    position: relative;
+    z-index: 1;
+}
+
 
 .header-content {
     display: flex;

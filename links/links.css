@@ -140,7 +140,7 @@ nav a {
 section {
   padding: 60px 20px;
   text-align: center;
-  border-top: 1px solid #333;
+  /* border-top: 1px solid #333; */
 }
 
 #top {
@@ -201,7 +201,7 @@ section {
     margin-top: 15px;
     border-left: 4px solid #cc6d2e; 
     border-radius: 8px;
-    font-size: 0.95em;
+    font-size: 0.8em;
     line-height: 1.6;
 }
 
